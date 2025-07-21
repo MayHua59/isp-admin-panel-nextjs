@@ -10,6 +10,7 @@
   z-index: 2000;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow-y: auto;
   
 }
 
@@ -79,17 +80,19 @@
   .sidebar {
     position: static;
     transform: none !important;
-    height: 100%;
+    height: auto;
     box-shadow: none;
     z-index: 1;
-    
+    overflow-y: visible;
   }
   .closeBtn {
     display: none;
   }
 }
 
-
+/* Hide sidebar on mobile */
+@media (max-width: 767px) {
+}
 
 /* Close button only visible on mobile */
 .closeBtn {
@@ -118,8 +121,6 @@
     height: 100vh;
     z-index: 3000;
     transition: transform 0.3s;
-  overflow-y: auto;
-
   }
   .sidebar.closed {
     display: none;

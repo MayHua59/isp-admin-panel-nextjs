@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Sidebar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,6 +23,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Sidebar({ openSidebar, onClose }) {
+  const [isMobile, setIsMobile] = useState(false);
   const [open, setOpen] = useState({
     customers: false,
     tickets: false,
@@ -38,7 +39,12 @@ export default function Sidebar({ openSidebar, onClose }) {
     pppoe: false,
     pppoeServer: false,
   });
-
+useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   // Arrow icon logic
  const Arrow = ({ isOpen }) => (
   <FontAwesomeIcon
@@ -51,11 +57,11 @@ export default function Sidebar({ openSidebar, onClose }) {
 );
 
   return (
-    <nav
+   <nav
       className={
-        typeof window !== 'undefined' && window.innerWidth < 768
-          ? `${styles.sidebar} bg-white shadow-sm ${openSidebar ? styles.open : styles.closed}`
-          : `${styles.sidebar} bg-white shadow-sm`
+        isMobile
+          ? `${styles.sidebar} ${openSidebar ? styles.open : styles.closed}`
+          : styles.sidebar
       }
     >
           <button
