@@ -51,7 +51,13 @@ export default function Sidebar({ openSidebar, onClose }) {
 );
 
   return (
-    <nav className={`${styles.sidebar} bg-white shadow-sm ${openSidebar ? styles.open : styles.closed}`}>
+    <nav
+      className={
+        typeof window !== 'undefined' && window.innerWidth < 768
+          ? `${styles.sidebar} bg-white shadow-sm ${openSidebar ? styles.open : styles.closed}`
+          : `${styles.sidebar} bg-white shadow-sm`
+      }
+    >
           <button
         className={styles.closeBtn}
         onClick={onClose}

@@ -79,9 +79,10 @@
   .sidebar {
     position: static;
     transform: none !important;
-    height: 100vh;
+    height: 100%;
     box-shadow: none;
     z-index: 1;
+    
   }
   .closeBtn {
     display: none;
