@@ -1,0 +1,95 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  z-index: 1050;
+  border-radius: 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+  background-color: #fff;
+}
+
+/* Navbar brand for small screens */
+.navbar-brand {
+  font-weight: 600;
+  color: #2A4759 !important;
+}
+
+/* Navbar links */
+.nav-link {
+  color: #343a40 !important;
+  font-size: 1.15rem;
+  padding: 0.5rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #2A4759 !important;
+}
+
+/* Button styles */
+.btn-primary.btn-sm {
+  font-size: 0.9rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  font-size: 0.95rem;
+  background-color: #fff;
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  margin-top: 8px;
+}
+
+.dropdown-item {
+  color: #343a40;
+  padding: 8px 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #2A4759;
+  color: #fff;
+}
+
+.dropdown-divider {
+  margin: 4px 0;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .topbar {
+    padding: 0.5rem 0.5rem;
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2A4759;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s;
+}
+.toggleBtn:hover,
+.toggleBtn:focus {
+  background: #18323f;
+  outline: none;
+}

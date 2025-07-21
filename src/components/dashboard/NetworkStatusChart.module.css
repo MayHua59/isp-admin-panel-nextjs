@@ -1,0 +1,150 @@
+.networkCard {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cardHeader {
+  background-color: #343a40;
+  color: white;
+  border-bottom: 1px solid #495057;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.cardHeaderH5 {
+  margin-bottom: 0;
+  color: #d1d1d1;
+  font-weight: 600;
+}
+
+.cardBody {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.cardBodyH6 {
+  color: #343a40;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Graph Area Styling */
+.graphContainer {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-left: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  background-color: #fdfdfd;
+}
+
+.yAxisLabel {
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 0.7rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.yAxisValue {
+  position: absolute;
+  right: calc(100% + 5px);
+  font-size: 0.7rem;
+  color: #666;
+  text-align: right;
+  width: 30px;
+}
+.yAxisValueVal20 { top: 0px; }
+.yAxisValueVal15 { top: 48px; }
+.yAxisValueVal10 { top: 98px; }
+.yAxisValueVal05 { top: 148px; }
+.yAxisValueVal00 { top: 195px; }
+
+.xAxisLabel {
+  position: absolute;
+  bottom: -20px;
+  font-size: 0.7rem;
+  color: #666;
+  transform: translateX(-50%);
+}
+
+/* Grid lines */
+.gridLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dotted #e0e0e0;
+}
+.gridLineLine1 { top: 50px; }
+.gridLineLine2 { top: 100px; }
+.gridLineLine3 { top: 150px; }
+
+.verticalGridLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px dotted #e0e0e0;
+}
+.verticalGridLineFr04 { left: calc(100% / 5 * 1); }
+.verticalGridLineFr08 { left: calc(100% / 5 * 2); }
+.verticalGridLineFr12 { left: calc(100% / 5 * 3); }
+.verticalGridLineFr16 { left: calc(100% / 5 * 4); }
+
+/* Graph data areas */
+.graphData {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.graphGreenArea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 95%;
+  background-color: rgba(0, 128, 0, 0.3);
+  border: 1px solid #717171;
+}
+.graphBrownArea {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 40%;
+  height: 48%;
+  background-color: rgba(139, 69, 19, 0.6);
+}
+
+/* Legend below graph */
+.graphLegend {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: #666;
+  flex-wrap: wrap;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.legendColorBox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.legendItemOnlineOnus .legendColorBox { background-color: rgba(52, 124, 15, 0.1); border-color: #347C0F; }

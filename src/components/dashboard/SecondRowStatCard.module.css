@@ -1,0 +1,17 @@
+.statCard {
+  min-height: 120px;
+}
+
+.headerSection {
+  background: #1976d2;
+}
+
+.mainValue {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.label {
+  font-size: 0.7rem;
+}
