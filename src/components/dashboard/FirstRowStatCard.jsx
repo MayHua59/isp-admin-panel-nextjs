@@ -32,7 +32,7 @@ export default function FirstRowStatCard({
                 style={{ fontSize: iconSize, color: iconColor }}
               />
             )}
-            <span className="fw-bold">{mainText}</span>
+            <span className={styles.mainTextSmall}>{mainText}</span>
           </div>
           <div className="d-flex justify-content-between">
             <span>{leftText}</span>
