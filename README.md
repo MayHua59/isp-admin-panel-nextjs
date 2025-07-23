@@ -18,15 +18,17 @@ bun dev
 ## 2025-07-23 Pages 
 
 
-- [ ] crm/customers
+- [x] crm/customers
 - [ ] crm/customers/online
 - [ ] crm/customers/new
 - [ ] crm/customers/{id}
+- [ ] crm/customers/create
 
 - [ ] crm/tickets
 - [ ] crm/tickets/new
 - [ ] crm/tickets/closed
 - [ ] crm/tickets/{id}
+- [ ] crm/tickets/create
 
 - [ ] crm/devices
 - [ ] crm/devices/down
@@ -35,40 +37,49 @@ bun dev
 - [ ] crm/devices/power-failed
 - [ ] crm/devices/warning
 - [ ] crm/devices/{id}
+- [ ] crm/devices/create
 
 
 - [ ] crm/messages
 - [ ] crm/messages/unread
 - [ ] crm/messages/sent
 - [ ] crm/messages/{id}
+- [ ] crm/messages/create
 
 - [ ] networking/olt
 - [ ] networking/olt/create
 - [ ] networking/olt/{id}
+- [ ] networking/olt/create
 
 - [ ] networking/splitter
 - [ ] networking/splitter/create
 - [ ] networking/splitter/{id}
+- [ ] networking/splitter/create
 
 - [ ] networking/onu
 - [ ] networking/onu/create
 - [ ] networking/onu/{id}
+- [ ] networking/onu/create
 
 - [ ] networking/traffic-plan
 - [ ] networking/traffic-plan/create
 - [ ] networking/traffic-plan/{id}
+- [ ] networking/traffic-plan/create
 
 - [ ] networking/billing
 - [ ] networking/billing/create
 - [ ] networking/billing/{id}
+- [ ] networking/billing/create
 
 - [ ] networking/pppoe-account
 - [ ] networking/pppoe-account/create
 - [ ] networking/pppoe-account/{id}
+- [ ] networking/pppoe-account/create
 
 - [ ] networking/pppoe-server
 - [ ] networking/pppoe-server/create
 - [ ] networking/pppoe-server/{id}
+- [ ] networking/pppoe-server/create
 
 
 - [ ] system/administration
