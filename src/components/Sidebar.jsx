@@ -99,12 +99,12 @@ useEffect(() => {
           {open.customers && (
             <ul className={`nav flex-column ms-4 ${styles.submenu}`}>
               <li>
-                <a className="nav-link text-dark" href="#">
+                <a className="nav-link text-dark" href="/crm/customers">
                   All Customers
                 </a>
               </li>
               <li>
-                <a className="nav-link text-dark" href="#">
+                <a className="nav-link text-dark" href="/crm/customers/create">
                   Add Customer
                 </a>
               </li>

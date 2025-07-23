@@ -31,6 +31,7 @@ export default function Dashboard() {
           textColor="text-dark"
           cardStyle={{ height: "80px" }}
           iconColor="#ADD8E6"
+          href="/crm/customers"
         />
         <FirstRowStatCard
           icon={faUser}
@@ -41,6 +42,7 @@ export default function Dashboard() {
           textColor="text-dark"
           cardStyle={{ height: "80px" }}
           iconColor="#ADD8E6"
+          href="/crm/customers"
         />
         <FirstRowStatCard
           icon={faTicket}
@@ -51,6 +53,7 @@ export default function Dashboard() {
           textColor="text-dark"
           cardStyle={{ height: "80px" }}
           iconColor="#ADD8E6"
+          href="/crm/tickets"
         />
         <FirstRowStatCard
           icon={faDesktop}
@@ -61,6 +64,7 @@ export default function Dashboard() {
           textColor="text-dark"
           cardStyle={{ height: "80px" }}
           iconColor="#ADD8E6"
+          href="/crm/devices"
         />
       </div>
        {/* Statistics Cards Row 2 */}
