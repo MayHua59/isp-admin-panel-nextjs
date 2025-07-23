@@ -19,11 +19,10 @@ export default function FirstRowStatCard({
         className={`card shadow-sm rounded ${bgColor} ${textColor} ${styles.statCard}`}
         style={{
           ...cardStyle,
-          borderRadius: "0.375rem",
-          overflow: "hidden",
+          borderRadius: "0.375rem"
         }}
       >
-        <div className="card-body p-3 pb-2">
+        <div className="card-body p-3">
           <div className="d-flex align-items-center mb-2">
             {icon && (
               <FontAwesomeIcon
