@@ -19,9 +19,9 @@ export default function Page() {
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">
           <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
-          Customers
+          All Customers
         </h2>
-        <Link href="/customers/add" className="btn btn-primary">
+        <Link href="./customers/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
           Add Customer
         </Link>

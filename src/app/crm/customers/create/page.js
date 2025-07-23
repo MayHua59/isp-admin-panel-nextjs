@@ -80,7 +80,7 @@ export default function AddCustomerPage() {
       {/* Dashboard Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">Add New Customer</h2>
-        <Link href="/customers" className="btn btn-outline-secondary">
+        <Link href="/crm/customers" className="btn btn-outline-secondary">
           <FontAwesomeIcon icon={faTimes} className="me-2" />
           Cancel
         </Link>
