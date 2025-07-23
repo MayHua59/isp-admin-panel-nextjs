@@ -14,6 +14,68 @@ pnpm dev
 bun dev
 ```
 
+
+## 2025-07-23 Pages 
+
+
+- [ ] crm/customers
+- [ ] crm/customers/online
+- [ ] crm/customers/new
+- [ ] crm/customers/{id}
+
+- [ ] crm/tickets
+- [ ] crm/tickets/new
+- [ ] crm/tickets/closed
+- [ ] crm/tickets/{id}
+
+- [ ] crm/devices
+- [ ] crm/devices/down
+- [ ] crm/devices/waiting-authorize
+- [ ] crm/devices//authorized
+- [ ] crm/devices/power-failed
+- [ ] crm/devices/warning
+- [ ] crm/devices/{id}
+
+
+- [ ] crm/messages
+- [ ] crm/messages/unread
+- [ ] crm/messages/sent
+- [ ] crm/messages/{id}
+
+- [ ] networking/olt
+- [ ] networking/olt/create
+- [ ] networking/olt/{id}
+
+- [ ] networking/splitter
+- [ ] networking/splitter/create
+- [ ] networking/splitter/{id}
+
+- [ ] networking/onu
+- [ ] networking/onu/create
+- [ ] networking/onu/{id}
+
+- [ ] networking/traffic-plan
+- [ ] networking/traffic-plan/create
+- [ ] networking/traffic-plan/{id}
+
+- [ ] networking/billing
+- [ ] networking/billing/create
+- [ ] networking/billing/{id}
+
+- [ ] networking/pppoe-account
+- [ ] networking/pppoe-account/create
+- [ ] networking/pppoe-account/{id}
+
+- [ ] networking/pppoe-server
+- [ ] networking/pppoe-server/create
+- [ ] networking/pppoe-server/{id}
+
+
+- [ ] system/administration
+- [ ] system/config
+
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
