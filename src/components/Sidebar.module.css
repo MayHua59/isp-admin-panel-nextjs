@@ -90,9 +90,7 @@
   }
 }
 
-/* Hide sidebar on mobile */
-@media (max-width: 767px) {
-}
+
 
 /* Close button only visible on mobile */
 .closeBtn {
@@ -121,12 +119,13 @@
     height: 100vh;
     z-index: 3000;
     transition: transform 0.3s;
+    transform: translateX(-100%); 
   }
   .sidebar.closed {
-    display: none;
+    transform: translateX(-100%);
+    pointer-events: none;
   }
   .sidebar.open {
-    display: block;
     transform: translateX(0);
     pointer-events: auto;
   }
