@@ -215,10 +215,10 @@ useEffect(() => {
             {open.olt && (
               <ul className="nav flex-column">
                 <li className="nav-item ">
-                  <a className="nav-link text-dark" href="#">OLT List</a>
+                  <a className="nav-link text-dark" href="/company/networking/olt">OLT List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add OLT</a>
+                  <a className="nav-link text-dark" href="/company/networking/olt/create">Add OLT</a>
                 </li>
               </ul>
             )}
@@ -239,10 +239,10 @@ useEffect(() => {
             {open.splitter && (
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Splitter List</a>
+                  <a className="nav-link text-dark" href="/company/networking/splitter">Splitter List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add Splitter</a>
+                  <a className="nav-link text-dark" href="/company/networking/splitter/create">Add Splitter</a>
                 </li>
               </ul>
             )}
@@ -263,7 +263,7 @@ useEffect(() => {
             {open.onu && (
               <ul className="nav flex-column ">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">ONU List</a>
+                  <a className="nav-link text-dark" href="/company/networking/onu">ONU List</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link text-dark" href="#">Add ONU</a>
