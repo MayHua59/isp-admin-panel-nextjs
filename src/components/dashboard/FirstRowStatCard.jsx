@@ -1,12 +1,14 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./FirstRowStatCard.module.css";
+import Link from "next/link";
 
 export default function FirstRowStatCard({
   icon,
   mainText,
   leftText,
   rightText,
+  href = "#",
   bgColor = "bg-white",
   textColor = "text-dark",
   cardStyle = {},
@@ -15,6 +17,7 @@ export default function FirstRowStatCard({
 }) {
   return (
     <div className="col-12 col-md-3 mb-3">
+      
       <div
         className={`card shadow-sm rounded ${bgColor} ${textColor} ${styles.statCard}`}
         style={{
@@ -36,7 +39,9 @@ export default function FirstRowStatCard({
           </div>
           <div className="d-flex justify-content-between">
             <span>{leftText}</span>
+            <Link href={href} >
             <span>{rightText}</span>
+            </Link>
           </div>
         </div>
       </div>
