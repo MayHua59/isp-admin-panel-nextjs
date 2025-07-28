@@ -1,49 +1,49 @@
 "use client";
-import { faTableColumns, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+
+import { faIdCard, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-// Import home plan data
-import homePlans from "@/_mock/plans/home-plan/data";
+import cardPlans from "@/_mock/plans/card-plan/data";
 
-export default function Page() {
+export default function CardPlanListPage() {
   return (
     <div className="container-fluid">
-      {/* Dashboard Header */}
+      {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">
-          <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
-          Home Plans
+          <FontAwesomeIcon icon={faIdCard} className="me-2" style={{ color: "#000" }} />
+          Card Plans
         </h2>
-        <Link href="/company/networking/plan/home-plan/create" className="btn btn-primary">
+        <Link href="/company/networking/plan/card-plan/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
-          Add Home Plan
+          Add New Plan
         </Link>
       </div>
 
-      {/* Home Plan List Table */}
+      {/* Card Plan List Table */}
       <div className="card shadow">
         <div className="card-body">
           <div className="table-responsive">
             <table className="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Download</th>
-                  <th>Upload</th>
+                  <th>ID</th>
+                  <th>Plan Name</th>
+                  <th>Data (GB)</th>
+                  <th>Validity (Days)</th>
                   <th>Price</th>
-                  <th>Data Cap</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {homePlans.map((plan, idx) => (
-                  <tr key={idx}>
-                    <td>{plan.name}</td>
-                    <td>{plan.speedDownload}</td>
-                    <td>{plan.speedUpload}</td>
-                    <td>${plan.price}</td>
-                    <td>{plan.dataCap}</td>
+                {cardPlans.map((plan) => (
+                  <tr key={plan.id}>
+                    <td>{plan.id}</td>
+                    <td>{plan.plan_name}</td>
+                    <td>{plan.data_gb}</td>
+                    <td>{plan.validity_days}</td>
+                    <td>${plan.price.toFixed(2)}</td>
                     <td>
                       <button className="btn btn-sm btn-outline-primary me-2">
                         <FontAwesomeIcon icon={faEdit} />

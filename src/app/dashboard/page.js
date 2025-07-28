@@ -1,12 +1,12 @@
 "use client";
 import { faUser, faTicket, faDesktop, faTableColumns } from "@fortawesome/free-solid-svg-icons";
-import FirstRowStatCard from "../../components/dashboard/FirstRowStatCard";
+import FirstRowStatCard from "@/components/dashboard/FirstRowStatCard";
 import { faWandMagicSparkles, faWifi, faX, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import SecondRowStatCard from "../../components/dashboard/SecondRowStatCard";
+import SecondRowStatCard from "@/components/dashboard/SecondRowStatCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartPie } from "@fortawesome/free-solid-svg-icons";
-import NetworkStatusChart from "../../components/dashboard/NetworkStatusChart";
-import styles from "../../components/dashboard/NetworkStatusChart.module.css";
+import NetworkStatusChart from "@/components/dashboard/NetworkStatusChart";
+import styles from "@/components/dashboard/NetworkStatusChart.module.css";
 
 
 export default function Dashboard() {

@@ -1,49 +1,58 @@
 "use client";
-import { faTableColumns, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+
+import { faFileInvoiceDollar, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import billingData from "@/_mock/billing/data";
 
-// Import home plan data
-import homePlans from "@/_mock/plans/home-plan/data";
-
-export default function Page() {
+export default function BillingListPage() {
   return (
     <div className="container-fluid">
-      {/* Dashboard Header */}
+      {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">
-          <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
-          Home Plans
+          <FontAwesomeIcon icon={faFileInvoiceDollar} className="me-2" style={{ color: "#000" }} />
+          Billing List
         </h2>
-        <Link href="/company/networking/plan/home-plan/create" className="btn btn-primary">
+        <Link href="/company/billing/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
-          Add Home Plan
+          Add Billing
         </Link>
       </div>
 
-      {/* Home Plan List Table */}
+      {/* Billing List Table */}
       <div className="card shadow">
         <div className="card-body">
           <div className="table-responsive">
             <table className="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Download</th>
-                  <th>Upload</th>
-                  <th>Price</th>
-                  <th>Data Cap</th>
+                  <th>ID</th>
+                  <th>Customer Name</th>
+                  <th>Amount</th>
+                  <th>Due Date</th>
+                  <th>Status</th>
+                  <th>Invoice No.</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {homePlans.map((plan, idx) => (
-                  <tr key={idx}>
-                    <td>{plan.name}</td>
-                    <td>{plan.speedDownload}</td>
-                    <td>{plan.speedUpload}</td>
-                    <td>${plan.price}</td>
-                    <td>{plan.dataCap}</td>
+                {billingData.map((bill) => (
+                  <tr key={bill.id}>
+                    <td>{bill.id}</td>
+                    <td>{bill.customer_name}</td>
+                    <td>${bill.amount.toFixed(2)}</td>
+                    <td>{bill.due_date}</td>
+                    <td>
+                      <span className={`badge ${
+                        bill.status === 'Paid' ? 'bg-success' :
+                        bill.status === 'Unpaid' ? 'bg-warning text-dark' :
+                        'bg-danger'
+                      }`}>
+                        {bill.status}
+                      </span>
+                    </td>
+                    <td>{bill.invoice_number}</td>
                     <td>
                       <button className="btn btn-sm btn-outline-primary me-2">
                         <FontAwesomeIcon icon={faEdit} />

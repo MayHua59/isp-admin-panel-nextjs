@@ -1,23 +1,23 @@
 "use client";
 
-import { faSave, faTimes, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+import { faSave, faTimes, faSitemap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function AddSplitterPage() {
+export default function AddOnuPage() {
   const [formData, setFormData] = useState({
-    name: "",
-    location: "",
-    type: "",
+    serial_number: "",
+    model: "",
     manufacturer: "",
+    location: "",
   });
 
   const [errors, setErrors] = useState({
-    name: "",
-    location: "",
-    type: "",
+    serial_number: "",
+    model: "",
     manufacturer: "",
+    location: "",
   });
 
   const handleChange = (e) => {
@@ -38,22 +38,19 @@ export default function AddSplitterPage() {
     let valid = true;
     const newErrors = { ...errors };
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+    if (!formData.serial_number.trim()) {
+      newErrors.serial_number = "Serial Number is required";
       valid = false;
     }
-    if (!formData.location.trim()) {
-      newErrors.location = "Location is required";
-      valid = false;
-    }
-    if (!formData.type.trim()) {
-      newErrors.type = "Type is required";
+    if (!formData.model.trim()) {
+      newErrors.model = "Model is required";
       valid = false;
     }
     if (!formData.manufacturer.trim()) {
       newErrors.manufacturer = "Manufacturer is required";
       valid = false;
     }
+    // Location is optional, so no validation here unless explicitly needed
 
     setErrors(newErrors);
     return valid;
@@ -62,19 +59,19 @@ export default function AddSplitterPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Splitter Form submitted:", formData);
-      console.log("Splitter added successfully!");
+      console.log("ONU Form submitted:", formData);
+      console.log("ONU added successfully!");
       setFormData({
-        name: "",
-        location: "",
-        type: "",
+        serial_number: "",
+        model: "",
         manufacturer: "",
+        location: "",
       });
       setErrors({
-        name: "",
-        location: "",
-        type: "",
+        serial_number: "",
+        model: "",
         manufacturer: "",
+        location: "",
       });
     }
   };
@@ -84,65 +81,49 @@ export default function AddSplitterPage() {
       {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">
-          <FontAwesomeIcon icon={faCodeBranch} className="me-2" style={{ color: "#000" }} />
-          Add New Splitter
+          <FontAwesomeIcon icon={faSitemap} className="me-2" style={{ color: "#000" }} />
+          Add New ONU
         </h2>
-        <Link href="/company/networking/splitter" className="btn btn-outline-secondary">
+        <Link href="/company/networking/onu" className="btn btn-outline-secondary">
           <FontAwesomeIcon icon={faTimes} className="me-2" />
           Cancel
         </Link>
       </div>
 
-      {/* Splitter Form */}
+      {/* ONU Form */}
       <div className="card shadow">
         <div className="card-body">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="name" className="form-label">
-                Name <span className="text-danger">*</span>
+              <label htmlFor="serial_number" className="form-label">
+                Serial Number <span className="text-danger">*</span>
               </label>
               <input
                 type="text"
-                className={`form-control ${errors.name ? "is-invalid" : ""}`}
-                id="name"
-                name="name"
-                value={formData.name}
+                className={`form-control ${errors.serial_number ? "is-invalid" : ""}`}
+                id="serial_number"
+                name="serial_number"
+                value={formData.serial_number}
                 onChange={handleChange}
-                placeholder="Enter splitter name"
+                placeholder="Enter serial number"
               />
-              {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+              {errors.serial_number && <div className="invalid-feedback">{errors.serial_number}</div>}
             </div>
 
             <div className="mb-3">
-              <label htmlFor="location" className="form-label">
-                Location <span className="text-danger">*</span>
+              <label htmlFor="model" className="form-label">
+                Model <span className="text-danger">*</span>
               </label>
               <input
                 type="text"
-                className={`form-control ${errors.location ? "is-invalid" : ""}`}
-                id="location"
-                name="location"
-                value={formData.location}
+                className={`form-control ${errors.model ? "is-invalid" : ""}`}
+                id="model"
+                name="model"
+                value={formData.model}
                 onChange={handleChange}
-                placeholder="Enter location"
+                placeholder="Enter model"
               />
-              {errors.location && <div className="invalid-feedback">{errors.location}</div>}
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="type" className="form-label">
-                Type <span className="text-danger">*</span>
-              </label>
-              <input
-                type="text"
-                className={`form-control ${errors.type ? "is-invalid" : ""}`}
-                id="type"
-                name="type"
-                value={formData.type}
-                onChange={handleChange}
-                placeholder="e.g., 1x8, 1x16, PLC"
-              />
-              {errors.type && <div className="invalid-feedback">{errors.type}</div>}
+              {errors.model && <div className="invalid-feedback">{errors.model}</div>}
             </div>
 
             <div className="mb-3">
@@ -161,10 +142,25 @@ export default function AddSplitterPage() {
               {errors.manufacturer && <div className="invalid-feedback">{errors.manufacturer}</div>}
             </div>
 
+            <div className="mb-3">
+              <label htmlFor="location" className="form-label">
+                Location (Optional)
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                placeholder="Enter location"
+              />
+            </div>
+
             <div className="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="submit" className="btn btn-primary">
                 <FontAwesomeIcon icon={faSave} className="me-2" />
-                Save Splitter
+                Save ONU
               </button>
             </div>
           </form>

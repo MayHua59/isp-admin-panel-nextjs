@@ -15,7 +15,7 @@ export default function Page() {
           <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
           All ONUs
         </h2>
-        <Link href="./create" className="btn btn-primary">
+        <Link href="/company/networking/onu/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
           Add ONU
         </Link>

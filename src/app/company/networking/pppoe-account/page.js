@@ -1,49 +1,52 @@
-"use client";
-import { faTableColumns, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+"use client"; // This component needs client-side interactivity for buttons
+
+import { faUserLock, faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-// Import home plan data
-import homePlans from "@/_mock/plans/home-plan/data";
 
-export default function Page() {
+import pppoeAccounts from "@/_mock/pppoe-account/data";
+
+export default function PppoeAccountListPage() {
   return (
     <div className="container-fluid">
-      {/* Dashboard Header */}
+      {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="mb-0">
-          <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
-          Home Plans
+          <FontAwesomeIcon icon={faUserLock} className="me-2" style={{ color: "#000" }} />
+          PPPoE Accounts
         </h2>
-        <Link href="/company/networking/plan/home-plan/create" className="btn btn-primary">
+        <Link href="/company/networking/pppoe-account/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
-          Add Home Plan
+          Add PPPoE Account
         </Link>
       </div>
 
-      {/* Home Plan List Table */}
+      {/* PPPoE Account List Table */}
       <div className="card shadow">
         <div className="card-body">
           <div className="table-responsive">
             <table className="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Download</th>
-                  <th>Upload</th>
-                  <th>Price</th>
-                  <th>Data Cap</th>
+                  <th>ID</th>
+                  <th>Username</th>
+                  <th>ONU ID</th>
+                  <th>Plan ID</th>
+                  <th>User ID</th>
+                  <th>Created At</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {homePlans.map((plan, idx) => (
-                  <tr key={idx}>
-                    <td>{plan.name}</td>
-                    <td>{plan.speedDownload}</td>
-                    <td>{plan.speedUpload}</td>
-                    <td>${plan.price}</td>
-                    <td>{plan.dataCap}</td>
+                {pppoeAccounts.map((account) => (
+                  <tr key={account.id}>
+                    <td>{account.id}</td>
+                    <td>{account.username}</td>
+                    <td>{account.onu_id}</td>
+                    <td>{account.plan_id}</td>
+                    <td>{account.user_id}</td>
+                    <td>{new Date(account.created_at).toLocaleDateString()}</td>
                     <td>
                       <button className="btn btn-sm btn-outline-primary me-2">
                         <FontAwesomeIcon icon={faEdit} />

@@ -15,7 +15,7 @@ export default function Page() {
           <FontAwesomeIcon icon={faTableColumns} className="me-2" style={{ color: "#000" }} />
           All Splitters
         </h2>
-        <Link href="./create" className="btn btn-primary">
+        <Link href="/company/networking/splitter/create" className="btn btn-primary">
           <FontAwesomeIcon icon={faPlus} className="me-2" />
           Add Splitter
         </Link>
