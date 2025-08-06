@@ -268,7 +268,7 @@ useEffect(() => {
                   <a className="nav-link text-dark" href="/company/networking/onu">ONU List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="company/networking/onu/create">Add ONU</a>
+                  <a className="nav-link text-dark" href="/company/networking/onu/create">Add ONU</a>
                 </li>
                 
               </ul>
