@@ -51,7 +51,9 @@ useEffect(() => {
     icon={faChevronDown}
     className={styles.arrow}
     style={{
+      fontSize: "0.85rem",
       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+      transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1)",
     }}
   />
 );
@@ -215,10 +217,10 @@ useEffect(() => {
             {open.olt && (
               <ul className="nav flex-column">
                 <li className="nav-item ">
-                  <a className="nav-link text-dark" href="#">OLT List</a>
+                  <a className="nav-link text-dark" href="/company/networking/olt">OLT List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add OLT</a>
+                  <a className="nav-link text-dark" href="/company/networking/olt/create">Add OLT</a>
                 </li>
               </ul>
             )}
@@ -239,10 +241,10 @@ useEffect(() => {
             {open.splitter && (
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Splitter List</a>
+                  <a className="nav-link text-dark" href="/company/networking/splitter">Splitter List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add Splitter</a>
+                  <a className="nav-link text-dark" href="/company/networking/splitter/create">Add Splitter</a>
                 </li>
               </ul>
             )}
@@ -263,14 +265,12 @@ useEffect(() => {
             {open.onu && (
               <ul className="nav flex-column ">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">ONU List</a>
+                  <a className="nav-link text-dark" href="/company/networking/onu">ONU List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add ONU</a>
+                  <a className="nav-link text-dark" href="company/networking/onu/create">Add ONU</a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">ONU Config</a>
-                </li>
+                
               </ul>
             )}
           </li>
@@ -288,7 +288,7 @@ useEffect(() => {
               <Arrow isOpen={open.plan} />
             </button>
             {open.plan && (
-              <ul className="nav flex-column ms-4">
+              <ul className="nav flex-column ms-4 pt-3">
                 {/* Home Plan */}
                 <li className="nav-item">
                   <button
@@ -305,16 +305,16 @@ useEffect(() => {
                   {open.homePlan && (
                     <ul className="nav flex-column ms-4">
                       <li className="nav-item">
-                        <a className="nav-link text-dark" href="#">Plan List</a>
+                        <a className="nav-link text-dark" href="/company/networking/plan/home-plan">Plan List</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link text-dark" href="#">Add Plan</a>
+                        <a className="nav-link text-dark" href="/company/networking/plan/home-plan/create">Add Plan</a>
                       </li>
                     </ul>
                   )}
                 </li>
                 {/* Card Plan */}
-                <li className="nav-item">
+                <li className="nav-item pt-3">
                   <button
                     className={`nav-link text-dark d-flex justify-content-between align-items-center w-100 ${styles.btn}`}
                     onClick={() => setOpen(o => ({ ...o, cardPlan: !o.cardPlan }))}
@@ -329,10 +329,10 @@ useEffect(() => {
                   {open.cardPlan && (
                     <ul className="nav flex-column ms-4">
                       <li className="nav-item">
-                        <a className="nav-link text-dark" href="#">Plan List</a>
+                        <a className="nav-link text-dark" href="/company/networking/plan/card-plan">Plan List</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link text-dark" href="#">New Plan</a>
+                        <a className="nav-link text-dark" href="/company/networking/plan/card-plan/create">New Plan</a>
                       </li>
                     </ul>
                   )}
@@ -356,10 +356,10 @@ useEffect(() => {
             {open.billing && (
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Billing List</a>
+                  <a className="nav-link text-dark" href="/company/billing">Billing List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add Billing</a>
+                  <a className="nav-link text-dark" href="/company/billing/create">Add Billing</a>
                 </li>
               </ul>
             )}
@@ -380,10 +380,10 @@ useEffect(() => {
             {open.pppoe && (
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Account List</a>
+                  <a className="nav-link text-dark" href="/company/networking/pppoe-account">Account List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add Account</a>
+                  <a className="nav-link text-dark" href="/company/networking/pppoe-account/create">Add Account</a>
                 </li>
               </ul>
             )}
@@ -404,10 +404,10 @@ useEffect(() => {
             {open.pppoeServer && (
               <ul className="nav flex-column ">
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Server List</a>
+                  <a className="nav-link text-dark" href="/company/networking/pppoe-server">Server List</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">Add Server</a>
+                  <a className="nav-link text-dark" href="/company/networking/pppoe-server/create">Add Server</a>
                 </li>
               </ul>
             )}

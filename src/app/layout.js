@@ -2,9 +2,9 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
-import Sidebar from '../components/Sidebar';
-import TopNavbar from '../components/TopNavbar';
-import Overlay from "../components/Overlay";
+import Sidebar from '@/components/Sidebar';
+import TopNavbar from '@/components/TopNavbar';
+import Overlay from "@/components/Overlay";
 
 export default function RootLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
