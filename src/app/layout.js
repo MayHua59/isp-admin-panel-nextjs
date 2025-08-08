@@ -1,5 +1,10 @@
 "use client";
 import { useState } from "react";
+// start fix error of flsah of big icons
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
+// end fix error of flsah of big icons
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import Sidebar from '@/components/Sidebar';

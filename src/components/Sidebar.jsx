@@ -77,7 +77,7 @@ useEffect(() => {
         {/* Dashboard */}
         <li className={styles.activeItem}>
           <a className="nav-link text-white d-flex align-items-center" href="#">
-            <FontAwesomeIcon icon={faTableColumns} className="me-2" />
+            <FontAwesomeIcon icon={faTableColumns} className="me-2 sidebarIcon" />
             Dashboard
           </a>
         </li>
@@ -93,7 +93,7 @@ useEffect(() => {
             aria-expanded={open.customers}
           >
             <span >
-              <FontAwesomeIcon icon={faUsers} className="me-2" />
+              <FontAwesomeIcon icon={faUsers} className="me-2 sidebarIcon" />
               Customers
             </span>
             <Arrow isOpen={open.customers} />
@@ -125,7 +125,7 @@ useEffect(() => {
             aria-expanded={open.tickets}
           >
             <span>
-              <FontAwesomeIcon icon={faTicket} className="me-2" />
+              <FontAwesomeIcon icon={faTicket} className="me-2 sidebarIcon" />
               Tickets
             </span>
             <Arrow isOpen={open.tickets} />
@@ -159,7 +159,7 @@ useEffect(() => {
             aria-expanded={open.messages}
           >
             <span>
-              <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+              <FontAwesomeIcon icon={faEnvelope} className="me-2 sidebarIcon" />
               Messages
             </span>
             <Arrow isOpen={open.messages} />
@@ -194,7 +194,7 @@ useEffect(() => {
         aria-expanded={open.networking}
       >
         <span>
-          <FontAwesomeIcon icon={faGlobe} className="me-2" />
+          <FontAwesomeIcon icon={faGlobe} className="me-2 sidebarIcon" />
           Networking
         </span>
         <Arrow isOpen={open.networking} />
@@ -209,7 +209,7 @@ useEffect(() => {
               aria-expanded={open.olt}
             >
               <span>
-                <FontAwesomeIcon icon={faMicrochip} className="me-2" />
+                <FontAwesomeIcon icon={faMicrochip} className="me-2 sidebarIcon" />
                 OLT
               </span>
               <Arrow isOpen={open.olt} />
@@ -233,7 +233,7 @@ useEffect(() => {
               aria-expanded={open.splitter}
             >
               <span>
-                <FontAwesomeIcon icon={faCodeBranch} className="me-2" />
+                <FontAwesomeIcon icon={faCodeBranch} className="me-2 sidebarIcon" />
                 Splitter
               </span>
               <Arrow isOpen={open.splitter} />
@@ -257,7 +257,7 @@ useEffect(() => {
               aria-expanded={open.onu}
             >
               <span>
-                <FontAwesomeIcon icon={faSitemap} className="me-2" />
+                <FontAwesomeIcon icon={faSitemap} className="me-2 sidebarIcon" />
                 ONU
               </span>
               <Arrow isOpen={open.onu} />
@@ -282,7 +282,7 @@ useEffect(() => {
               aria-expanded={open.plan}
             >
               <span>
-                <FontAwesomeIcon icon={faLayerGroup} className="me-2" />
+                <FontAwesomeIcon icon={faLayerGroup} className="me-2 sidebarIcon" />
                 Tariff Plan
               </span>
               <Arrow isOpen={open.plan} />
@@ -297,7 +297,7 @@ useEffect(() => {
                     aria-expanded={open.homePlan}
                   >
                     <span>
-                      <FontAwesomeIcon icon={faHome} className="me-2" />
+                      <FontAwesomeIcon icon={faHome} className="me-2 sidebarIcon" />
                       Home Plan
                     </span>
                     <Arrow isOpen={open.homePlan} />
@@ -321,7 +321,7 @@ useEffect(() => {
                     aria-expanded={open.cardPlan}
                   >
                     <span>
-                      <FontAwesomeIcon icon={faIdCard} className="me-2" />
+                      <FontAwesomeIcon icon={faIdCard} className="me-2 sidebarIcon" />
                       Card Plan
                     </span>
                     <Arrow isOpen={open.cardPlan} />
@@ -348,7 +348,7 @@ useEffect(() => {
               aria-expanded={open.billing}
             >
               <span>
-                <FontAwesomeIcon icon={faFileInvoiceDollar} className="me-2" />
+                <FontAwesomeIcon icon={faFileInvoiceDollar} className="me-2 sidebarIcon" />
                 Billing
               </span>
               <Arrow isOpen={open.billing} />
@@ -372,7 +372,7 @@ useEffect(() => {
               aria-expanded={open.pppoe}
             >
               <span>
-                <FontAwesomeIcon icon={faUserLock} className="me-2" />
+                <FontAwesomeIcon icon={faUserLock} className="me-2 sidebarIcon" />
                 PPPoE Account
               </span>
               <Arrow isOpen={open.pppoe} />
@@ -396,7 +396,7 @@ useEffect(() => {
               aria-expanded={open.pppoeServer}
             >
               <span>
-                <FontAwesomeIcon icon={faServer} className="me-2" />
+                <FontAwesomeIcon icon={faServer} className="me-2 sidebarIcon" />
                 PPPoE Server
               </span>
               <Arrow isOpen={open.pppoeServer} />
@@ -420,13 +420,13 @@ useEffect(() => {
         <li className={`mt-3 mb-1 ${styles.sectionTitle}`}>SYSTEM</li>
         <li>
           <a className="nav-link text-dark d-flex align-items-center" href="#">
-            <FontAwesomeIcon icon={faUserShield} className="me-2" />
+            <FontAwesomeIcon icon={faUserShield} className="me-2 sidebarIcon" />
             Administration
           </a>
         </li>
         <li>
           <a className="nav-link text-dark d-flex align-items-center" href="#">
-            <FontAwesomeIcon icon={faCog} className="me-2" />
+            <FontAwesomeIcon icon={faCog} className="me-2 sidebarIcon" />
             Config
           </a>
         </li>
