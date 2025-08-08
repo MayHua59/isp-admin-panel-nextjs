@@ -167,20 +167,20 @@ useEffect(() => {
           {open.messages && (
             <ul className={`nav flex-column ms-4 ${styles.submenu}`}>
               <li>
-                <a className="nav-link text-dark" href="#">
+                <a className="nav-link text-dark" href="/crm/messages">
                   All Messages
                 </a>
               </li>
               <li>
-                <a className="nav-link text-dark" href="#">
-                  Unread
+                <a className="nav-link text-dark" href="/crm/messages/create">
+                  Add Message
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="nav-link text-dark" href="#">
                   Sent
                 </a>
-              </li>
+              </li> */}
             </ul>
           )}
         </li>
