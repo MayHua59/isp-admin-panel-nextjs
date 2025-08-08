@@ -133,20 +133,20 @@ useEffect(() => {
           {open.tickets && (
             <ul className={`nav flex-column ms-4 ${styles.submenu}`}>
               <li>
-                <a className="nav-link text-dark" href="#">
+                <a className="nav-link text-dark" href="/crm/tickets">
                   All Tickets
                 </a>
               </li>
               <li >
-                <a className="nav-link text-dark" href="#">
-                  Open Tickets
+                <a className="nav-link text-dark" href="/crm/tickets/create">
+                  Add Ticket
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="nav-link text-dark" href="#">
                   Closed Tickets
                 </a>
-              </li>
+              </li> */}
             </ul>
           )}
         </li>
