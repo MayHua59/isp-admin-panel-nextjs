@@ -76,7 +76,7 @@ useEffect(() => {
       <ul className="nav flex-column">
         {/* Dashboard */}
         <li className={styles.activeItem}>
-          <a className="nav-link text-white d-flex align-items-center" href="#">
+          <a className="nav-link text-white d-flex align-items-center" href="/dashboard">
             <FontAwesomeIcon icon={faTableColumns} className="me-2 sidebarIcon" />
             Dashboard
           </a>
