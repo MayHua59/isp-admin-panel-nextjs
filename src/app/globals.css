@@ -29,3 +29,9 @@ body, html {
   min-height: calc(100vh - 70px);
   /* prevents overlap with sidebar and navbar */
 }
+.sidebarIcon {
+  font-size: 0.95rem !important; 
+}
+svg.sidebarIcon {
+  font-size: 0.95rem !important;
+}
